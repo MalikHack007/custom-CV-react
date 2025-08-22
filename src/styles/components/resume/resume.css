@@ -1,0 +1,10 @@
+
+.resume{
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-auto-flow: row;
+    background-color: var(--base-foreground);
+    width: 8.5in;
+    height: 11in;
+    gap: 40px;
+}

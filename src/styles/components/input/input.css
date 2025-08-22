@@ -1,0 +1,7 @@
+.input {
+    background-color: var(--base-bg);
+    padding: 10px;
+    transition: border .25s,box-shadow .25s;
+    border-radius: 12px;
+}
+

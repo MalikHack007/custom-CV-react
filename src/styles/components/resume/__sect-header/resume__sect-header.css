@@ -1,0 +1,9 @@
+
+
+
+.resume__sect-header{
+    color: var(--resume-section-color);
+    background-color: var(--base-bg);
+    width: 100%;
+    text-align: center;
+}

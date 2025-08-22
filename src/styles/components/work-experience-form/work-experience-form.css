@@ -1,0 +1,10 @@
+.work-experience-form{
+    display: grid;
+    grid-auto-flow: row;
+    height: fit-content;
+    padding: 18px 18px;
+    grid-auto-rows: auto;
+    gap: 20px;
+    border-radius: 12px;
+    background-color: var(--base-foreground);
+}

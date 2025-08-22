@@ -1,0 +1,9 @@
+.input_focused{
+    border-color: #3b83f6;
+    box-shadow: 0 3px 15px rgba(59,131,246,.2);
+    outline: none;
+}
+
+.input_blurred{
+    border: 2px solid transparent;
+}

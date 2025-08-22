@@ -1,0 +1,7 @@
+.input-group{
+    display: grid;
+    grid-auto-flow: row;
+    height: fit-content;
+    grid-template-rows: repeat(2, auto);
+    gap: 6px;
+}

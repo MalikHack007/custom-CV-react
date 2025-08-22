@@ -1,0 +1,11 @@
+
+
+.resume__work-exp{
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: auto;
+    justify-items: center;
+    align-items: center;
+    margin: 0px 56px;
+    gap: 13px;
+}

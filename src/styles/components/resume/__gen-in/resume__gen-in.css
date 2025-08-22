@@ -1,0 +1,15 @@
+
+
+
+.resume__gen-in{
+    display: grid;
+    grid-auto-rows: auto;
+    grid-auto-flow: row;
+    padding: 36px 24px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    height: fit-content;
+    background-color: var(--resume-section-color);
+    color: var(--base-foreground);
+}

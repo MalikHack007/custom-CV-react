@@ -1,0 +1,9 @@
+.resume__sect-entry{
+    display: grid;
+    grid-auto-columns: auto;
+    grid-auto-flow: column;
+    width: 100%;
+    justify-content: start;
+    align-content: start;
+    gap: 5rem;
+}
