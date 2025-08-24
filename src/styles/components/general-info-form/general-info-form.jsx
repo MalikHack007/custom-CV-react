@@ -1,4 +1,4 @@
-import { Input } from '../input/input.jsx'
+import { Input } from '../input/input.jsx';
 
 export function GeneralInfoForm(props){
 

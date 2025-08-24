@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
-export function Input(){
+export function Input(props){
     const [focused, setFocused] = useState(false);
 
     return(
-        <input className={`${focused ? "input_focused" : "input_blurred"} input`} onFocus={()=>setFocused(true)} onBlur={()=>setFocused(false)}/>
+        <input {...props} className={`${focused ? "input_focused" : "input_blurred"} input`} onFocus={()=>setFocused(true)} onBlur={()=>setFocused(false)}/>
     )
 }

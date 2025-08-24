@@ -4,7 +4,7 @@ export function GenIn(props){
     return(
             <div className="resume__gen-in">
                 <div>
-                    <h1 style={{fontWeight: "bold"}}>{genIn.fullName}</h1>
+                    <h1>{genIn.fullName}</h1>
                 </div>
 
                 <div className="resume__sub-sect1">

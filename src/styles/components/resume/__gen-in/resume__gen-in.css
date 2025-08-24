@@ -12,4 +12,5 @@
     height: fit-content;
     background-color: var(--resume-section-color);
     color: var(--base-foreground);
+    gap: 0.8rem;
 }
