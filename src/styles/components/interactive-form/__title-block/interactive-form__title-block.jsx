@@ -9,9 +9,9 @@ export function TitleBlock(props){
     }
 
     return(
-        <button onClick={handleClick}>
+        <button type="button" className="interactive-form__title-block" onClick={handleClick}>
             <h2>{`${title}`}</h2>
-            <i class="fa-solid fa-eye"></i>
+            <i className="fa-solid fa-eye"></i>
         </button>
     )
 }   

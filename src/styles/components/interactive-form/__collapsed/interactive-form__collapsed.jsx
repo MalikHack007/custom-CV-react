@@ -10,11 +10,11 @@ export function CollapsedForm (props) {
     
         <div className="interactive-form__collapsed" onClick={handleClick}>
             <div className="interactive-form__collapsed-left-sect">
-                {`${formIcon}`}
+                {formIcon}
                 <h2>{`${formName}`}</h2>
             </div>
 
-            <i class="fa-solid fa-chevron-down"></i> 
+            <i className="fa-solid fa-chevron-down"></i> 
 
         </div>
     )

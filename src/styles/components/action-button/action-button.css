@@ -1,16 +1,17 @@
-.interactive-form__collapsed{
+.action-button{
+    border: none;
+    border-radius: 4px;
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: auto;
-    justify-content: space-between;
     align-content: center;
+    justify-content: center;
     align-items: center;
+    justify-items: center;
+    padding: 8px 16px;
     height: min-content;
-    background-color: var(--base-foreground);
-    padding: 18px 18px;
 }
 
-
-.interactive-form__collapsed:hover{
+.action-button:hover{
     cursor: pointer;
 }

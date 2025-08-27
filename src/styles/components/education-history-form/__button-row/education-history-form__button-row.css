@@ -1,16 +1,10 @@
-.interactive-form__collapsed{
+.education-history-form__button-row{
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: auto;
     justify-content: space-between;
+    justify-items: center;
     align-content: center;
     align-items: center;
     height: min-content;
-    background-color: var(--base-foreground);
-    padding: 18px 18px;
-}
-
-
-.interactive-form__collapsed:hover{
-    cursor: pointer;
 }

@@ -1,0 +1,12 @@
+.work-experience-form__btn-row-right{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+    height: min-content;
+    gap: 12px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+

@@ -1,6 +1,5 @@
 import { GeneralInfoForm } from "../general-info-form/general-info-form.jsx";
-import { WorkExpForm } from "../work-experience-form/work-experience-form.jsx";
-import { EducationForm } from "../education-history-form/education-history-form.jsx";
+import { InteractiveForm } from "../interactive-form/interactive-form.jsx";
 
 
 export function Form(props){
@@ -8,17 +7,35 @@ export function Form(props){
     const { genIn, 
             setGenIn, 
             jobHistory, 
+            jobHistoryBackUp,
             setJobHistory, 
+            setJobHistoryBackUp,
             education, 
-            setEducation } = props;
+            educationBackUp,
+            setEducation,
+            setEducationBackUp } = props;
+
+    const educationIcon = <i className="fa-solid fa-graduation-cap"></i>;
+    const workIcon = <i className="fa-solid fa-briefcase"></i>;
 
     return(
         <form className="form">
             <GeneralInfoForm genIn={genIn} setGenIn={setGenIn} />
 
-            <WorkExpForm jobHistory={jobHistory} setJobHistory={setJobHistory} />
+            <InteractiveForm formName="Education" formIcon={educationIcon} 
+             jobHistory={jobHistory} jobHistoryBackUp={ jobHistoryBackUp }
+             education={education} educationBackUp={ educationBackUp } 
+             setEducation={setEducation} setEducationBackUp={ setEducationBackUp }
+             setJobHistory={setJobHistory} setJobHistoryBackUp={ setJobHistoryBackUp }> 
+            </InteractiveForm>
 
-            <EducationForm education={education} setEducation={setEducation} />
+            <InteractiveForm formName="Experience" formIcon={ workIcon } 
+             jobHistory={jobHistory} jobHistoryBackUp={ jobHistoryBackUp }
+             education={education} educationBackUp={ educationBackUp } 
+             setEducation={setEducation} setEducationBackUp={ setEducationBackUp }
+             setJobHistory={setJobHistory} setJobHistoryBackUp={ setJobHistoryBackUp }> 
+            </InteractiveForm>
+
         </form>
 
     );
