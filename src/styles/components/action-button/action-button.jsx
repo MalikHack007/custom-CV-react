@@ -15,7 +15,7 @@ export function ActionButton(props){
         switch (buttonName){
             case "Delete":
                 handleClick = ()=>{
-                    let newEducationArr = educationBackUp.map((edu)=>({...edu}));
+                    let newEducationArr = education.map((edu)=>({...edu}));
                     newEducationArr.splice(formIndex, 1);
                     setEducation(newEducationArr.map((edu)=>({...edu})));
                     setEducationBackUp(newEducationArr.map((edu)=>({...edu})));
@@ -50,7 +50,7 @@ export function ActionButton(props){
         switch (buttonName){
             case "Delete":
                 handleClick = ()=>{
-                    let newJobHistory = jobHistoryBackUp.map((job)=>({...job}));
+                    let newJobHistory = jobHistory.map((job)=>({...job}));
                     newJobHistory.splice(formIndex, 1);
                     setJobHistory(newJobHistory.map((job)=>({...job})));
                     setJobHistoryBackUp(newJobHistory.map((job)=>({...job})));

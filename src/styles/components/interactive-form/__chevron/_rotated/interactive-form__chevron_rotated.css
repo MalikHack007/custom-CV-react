@@ -1,0 +1,4 @@
+.interactive-form__chevron_rotated{
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out 0s;
+}

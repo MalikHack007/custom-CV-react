@@ -1,17 +1,12 @@
-.interactive-form__collapsed{
+.interactive-form__btn-container{
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: auto;
-    justify-content: space-between;
+    padding: 18px 18px;
+    justify-content: center;
+    justify-items: center;
     align-content: center;
     align-items: center;
-    height: min-content;
     background-color: var(--base-foreground);
-    padding: 18px 18px;
     height: min-content;
-}
-
-
-.interactive-form__collapsed:hover{
-    cursor: pointer;
 }

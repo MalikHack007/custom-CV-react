@@ -7,7 +7,7 @@
     align-items: center;
     border-color: transparent;
     background-color: var(--base-foreground);
-    padding: 18px 18px;
+    padding: 12px 14px 12px 24px;
 }
 
 .interactive-form__title-block:hover{

@@ -3,6 +3,8 @@ import { CollapsedForm } from './__collapsed/interactive-form__collapsed.jsx';
 import { TitleBlock } from './__title-block/interactive-form__title-block.jsx';
 import { WorkExpForm } from '../work-experience-form/work-experience-form.jsx';
 import { EducationForm } from '../education-history-form/education-history-form.jsx';
+import { AddJobBtn } from './__add-job-btn/interactive-form__add-job-btn.jsx';
+import { AddEduBtn } from './__add-edu-btn/interactive-form__add-edu-btn.jsx';
 
 export function InteractiveForm(props){
     const { formName, formIcon, jobHistory, 
@@ -15,17 +17,20 @@ export function InteractiveForm(props){
     let formList;
     let titleKey;
     let FormToDisplay;
+    let NewFormButton;
 
     if(formName=="Education"){
         formList = education;
         titleKey = "school";
         FormToDisplay = EducationForm;
+        NewFormButton = AddEduBtn;
     }
 
     else if(formName=="Experience"){
         formList = jobHistory;
         titleKey = "companyName";
         FormToDisplay = WorkExpForm;
+        NewFormButton = AddJobBtn;
     }
 
     return(
@@ -33,14 +38,18 @@ export function InteractiveForm(props){
             <CollapsedForm formName={formName} formIcon={formIcon} formState={formState} setFormState={setFormState}>
             </CollapsedForm>
             {
-                //TODO: when there is a form index present, replace the title block list with form.
                 formState.expanded ? ( formState.formIndex==null ? 
-                formList.map((formObj, index) => {
+                <>
+                {formList.map((formObj, index) => {
                     return (
                         <TitleBlock title={formObj[titleKey]} key={index} myKey={index} formState={formState} setFormState={setFormState}>
                         </TitleBlock>
                     )
-                }) 
+                })}
+                <NewFormButton formState={ formState } setFormState={ setFormState } 
+                 jobHistory={ jobHistory } setJobHistory={ setJobHistory } 
+                 education={ education } setEducation={ setEducation }/>
+                </>
                 : <FormToDisplay education={ education } setEducation={ setEducation } 
                    jobHistory={ jobHistory } setJobHistory={ setJobHistory } formState={ formState } 
                    setFormState={ setFormState } jobHistoryBackUp={ jobHistoryBackUp } setJobHistoryBackUp={ setJobHistoryBackUp }

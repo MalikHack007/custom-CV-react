@@ -1,5 +1,6 @@
 
 
+
 export function TitleBlock(props){
     const { title, myKey, formState, setFormState } = props;
 
@@ -10,7 +11,7 @@ export function TitleBlock(props){
 
     return(
         <button type="button" className="interactive-form__title-block" onClick={handleClick}>
-            <h2>{`${title}`}</h2>
+            <h3>{`${title}`}</h3>
             <i className="fa-solid fa-eye"></i>
         </button>
     )

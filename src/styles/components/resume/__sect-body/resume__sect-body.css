@@ -5,4 +5,5 @@
     grid-auto-flow: row;
     align-content: start;
     align-items: start; 
+    gap: 1.5rem;
 }
