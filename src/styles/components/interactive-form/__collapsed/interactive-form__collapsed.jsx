@@ -1,18 +1,41 @@
-import { useState } from 'react';
 
 export function CollapsedForm (props) {
     const { formName, formIcon, formState, setFormState } = props;
 
-    const [chevronRotated, setChevronRotated] = useState(false);
+    let handleClick;
 
-    const handleClick = () => {
-        let newFormState = {...formState};
-        setFormState(newFormState.expanded ? {...newFormState, expanded: false} : {...newFormState, expanded: true});
-        setChevronRotated(chevronRotated ? false : true);
+    let newFormState = {...formState};
+
+    let chevronRotated;
+
+    if(formName == "Education"){
+
+        handleClick=()=>{
+            setFormState(
+                newFormState.eduExpanded ? 
+                {...newFormState, eduExpanded: false} 
+                : (newFormState.expExpanded ? {...newFormState, expExpanded: false, eduExpanded: true} 
+                    : {...newFormState, eduExpanded: true}));
+        }
+
+        chevronRotated = formState.eduExpanded;
+
+    }
+
+    else if (formName == "Experience"){
+        handleClick=()=>{
+            setFormState(
+                newFormState.expExpanded ? 
+                {...newFormState, expExpanded: false} 
+                : (newFormState.eduExpanded ? {...newFormState, eduExpanded: false, expExpanded: true} 
+                    : {...newFormState, expExpanded: true}));
+        }
+
+        chevronRotated = formState.expExpanded;
     }
 
     return (
-    
+        
         <div className="interactive-form__collapsed" onClick={handleClick}>
             <div className="interactive-form__collapsed-left-sect">
                 {formIcon}

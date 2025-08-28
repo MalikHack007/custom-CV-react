@@ -8,6 +8,7 @@
     border-color: transparent;
     background-color: var(--base-foreground);
     padding: 12px 14px 12px 24px;
+    width: 100%;
 }
 
 .interactive-form__title-block:hover{
